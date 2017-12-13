@@ -69,16 +69,16 @@ class CWindow:public CView
 				case KEY_LEFT:
 					move (CPoint (-1, 0));
 					return true;
-				case 54: // zwieksz W
+				case 54: // zwieksz W 6
 					changeSize(1, 0);
 					return true;
-				case 50: // zwieksz H
+				case 50: // zwieksz H 2
 					changeSize(0, 1);
 					return true;
-				case 52: // zmniejsz W
+				case 52: // zmniejsz W 4
 					changeSize(-1, 0);
 					return true;
-				case 56: // zmniejsz H
+				case 56: // zmniejsz H 8
 					changeSize(0, -1);
 					return true;
 			};
@@ -179,7 +179,7 @@ class CGroup:public CView
 			}
 			else if(type == 2)
 			{
-				children.push_back(new CInputLine (CRect (CPoint (5, 5), CPoint (15, 10))));
+				children.push_back(new CInputLine (CRect (CPoint (5, 5), CPoint (15, 10)), '_'));
 			}
 			else if(type == 3)
 			{
